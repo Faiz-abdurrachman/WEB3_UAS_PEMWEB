@@ -1,123 +1,123 @@
-# Web3 Donation DApp
+# Web3 DApp UAS Pemrograman Web
 
-A decentralized application (DApp) for ETH donations on the Ethereum Sepolia Testnet. This project demonstrates full-stack Web3 development capabilities using React, Node.js, and Smart Contracts.
+Aplikasi Terdesentralisasi (DApp) untuk donasi ETH pada Jaringan Sepolia Testnet. Proyek ini mendemonstrasikan kemampuan pengembangan Web3 full-stack menggunakan React, Node.js, dan Smart Contracts.
 
-## Project Overview
+## Ikhtisar Proyek
 
-This application allows users to:
+Aplikasi ini memungkinkan pengguna untuk:
 
-1. Connect their MetaMask wallet securely
-2. View real-time wallet balance and network status
-3. Donate ETH to a deployed smart contract
-4. View live donation statistics from the blockchain
-5. See a history of recent transactions
+1. Menghubungkan dompet MetaMask mereka secara aman
+2. Melihat saldo dompet dan status jaringan secara real-time
+3. Melakukan donasi ETH ke smart contract yang telah dideploy
+4. Melihat statistik donasi langsung dari blockchain
+5. Melihat riwayat transaksi terkini dari server
 
-## Technology Stack
+## Teknologi yang Digunakan
 
 - **Frontend:** React.js, Ethers.js v6
 - **Backend:** Node.js, Express.js
 - **Blockchain:** Solidity, Ethereum Sepolia Testnet
-- **Styling:** Modern CSS3, CSS Grid/Flexbox (Custom Design System)
+- **Styling:** Modern CSS3, CSS Grid/Flexbox (Sistem Desain Kustom)
 
-## Prerequisites
+## Prasyarat
 
-Before running this project, ensure you have the following installed:
+Sebelum menjalankan proyek ini, pastikan Anda telah menginstal:
 
-- Node.js (v16 or higher)
+- Node.js (v16 atau lebih baru)
 - npm (Node Package Manager)
-- MetaMask Browser Extension
+- Ekstensi Browser MetaMask
 
-## Installation Guide
+## Panduan Instalasi
 
-Follow these steps to set up the project locally:
+Ikuti langkah-langkah berikut untuk mengatur proyek secara lokal:
 
-1. **Clone the repository**
+1. **Clone repositori**
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Faiz-abdurrachman/WEB3_UAS_PEMWEB.git
    cd web3_uas
    ```
 
-2. **Install Frontend Dependencies**
+2. **Instal Dependensi Frontend**
 
    ```bash
    cd frontend
    npm install
    ```
 
-3. **Install Backend Dependencies**
+3. **Instal Dependensi Backend**
    ```bash
    cd ../backend
    npm install
    ```
 
-## Running the Application
+## Menjalankan Aplikasi
 
-You need to run both the backend server and frontend client simultaneously.
+Anda perlu menjalankan server backend dan klien frontend secara bersamaan.
 
-1. **Start the Backend Server**
-   Open a terminal and run:
+1. **Jalankan Server Backend**
+   Buka terminal dan jalankan:
 
    ```bash
    cd backend
    npm start
    ```
 
-   The server will start on `http://localhost:5000`
+   Server akan berjalan di `http://localhost:5000`
 
-2. **Start the Frontend Client**
-   Open a new terminal window and run:
+2. **Jalankan Klien Frontend**
+   Buka terminal baru dan jalankan:
    ```bash
    cd frontend
    npm start
    ```
-   The application will open in your browser at `http://localhost:3000`
+   Aplikasi akan terbuka di browser Anda di `http://localhost:3000`
 
-## Project Structure
+## Struktur Proyek
 
 ```
 web3_uas/
-├── frontend/                 # React Frontend Application
+├── frontend/                 # Aplikasi Frontend React
 │   ├── src/
-│   │   ├── components/       # UI Components
-│   │   │   ├── WalletConnect.js   # Wallet connection logic
-│   │   │   ├── DonateForm.js      # Donation interface
-│   │   │   ├── ContractData.js    # Smart contract interaction
-│   │   │   ├── TransactionList.js # Transaction history display
-│   │   │   └── BalanceDisplay.js  # Balance visualization
-│   │   ├── App.js           # Main application layout
-│   │   ├── App.css          # Component styling
-│   │   ├── index.css        # Global design system
-│   │   └── contract.js      # Contract ABI and configuration
+│   │   ├── components/       # Komponen UI
+│   │   │   ├── WalletConnect.js   # Logika koneksi dompet
+│   │   │   ├── DonateForm.js      # Antarmuka donasi
+│   │   │   ├── ContractData.js    # Interaksi smart contract
+│   │   │   ├── TransactionList.js # Tampilan riwayat transaksi
+│   │   │   └── BalanceDisplay.js  # Visualisasi saldo
+│   │   ├── App.js           # Tata letak aplikasi utama
+│   │   ├── App.css          # Styling komponen
+│   │   ├── index.css        # Sistem desain global
+│   │   └── contract.js      # ABI Kontrak dan konfigurasi
 │   └── package.json
-├── backend/                  # Express Backend Server
-│   ├── server.js            # API endpoints & server config
+├── backend/                  # Server Backend Express
+│   ├── server.js            # Endpoint API & konfigurasi server
 │   └── package.json
-└── smart-contracts/          # Solidity Contracts
-    └── DonationContract.sol # Main donation logic
+└── smart-contracts/          # Kontrak Solidity
+    └── DonationContract.sol # Logika donasi utama
 ```
 
-## Smart Contract Details
+## Detail Smart Contract
 
-- **Network:** Sepolia Testnet
-- **Contract Address:** `0xC2e16AAe1BBe7b40ED2eA95025A118AbCa18486D`
-- **Compiler Version:** Solidity ^0.8.0
+- **Jaringan:** Sepolia Testnet
+- **Alamat Kontrak:** `0xC2e16AAe1BBe7b40ED2eA95025A118AbCa18486D`
+- **Versi Kompiler:** Solidity ^0.8.0
 
-## Troubleshooting
+## Pemecahan Masalah (Troubleshooting)
 
-### MetaMask Connection Issues
+### Masalah Koneksi MetaMask
 
-- Ensure you have the MetaMask extension installed.
-- Verify you are connected to the **Sepolia Testnet**.
-- Refresh the page if the wallet does not connect immediately.
+- Pastikan ekstensi MetaMask sudah terinstal.
+- Verifikasi bahwa Anda terhubung ke **Sepolia Testnet**.
+- Refresh halaman jika dompet tidak segera terhubung.
 
-### Transaction Failures
+### Kegagalan Transaksi
 
-- Ensure you have sufficient Sepolia ETH (including gas fees).
-- You can get free test ETH from a Sepolia Faucet.
-- Check the console for detailed error messages.
+- Pastikan Anda memiliki cukup Sepolia ETH (termasuk biaya gas).
+- Anda bisa mendapatkan tes ETH gratis dari Sepolia Faucet.
+- Periksa konsol browser untuk pesan kesalahan yang lebih rinci.
 
-## License
+## Lisensi
 
-This project is created for the Web Programming Final Exam.
-All rights reserved.
+Proyek ini dibuat untuk Ujian Akhir Semester (UAS) Pemrograman Web.
+Hak cipta dilindungi undang-undang.

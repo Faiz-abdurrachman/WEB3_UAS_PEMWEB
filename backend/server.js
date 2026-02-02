@@ -1,35 +1,35 @@
 /**
  * server.js
- * Backend API for Web3 DApp UAS
- * Provides transaction history data and API endpoints
+ * API Backend untuk UAS Pemrograman Web Web3 DApp
+ * Menyediakan data riwayat transaksi dan endpoint API
  */
 
 const express = require('express');
 const cors = require('cors');
 
-// Initialize Express application
+// Inisialisasi aplikasi Express
 const app = express();
 const PORT = 5000;
 
-// Middleware Configuration
-// Enable CORS for frontend communication
+// Konfigurasi Middleware
+// Aktifkan CORS untuk komunikasi frontend
 app.use(cors());
-// Parse JSON request bodies
+// Parsing JSON request body
 app.use(express.json());
 
 /**
- * Transaction Data Interface
+ * Interface Data Transaksi
  * @typedef {Object} Transaction
- * @property {number} id - Unique identifier
- * @property {string} from - Sender address
- * @property {string} to - Recipient address
- * @property {string} amount - Transaction amount in ETH
- * @property {string} timestamp - Date of transaction
+ * @property {number} id - Pengidentifikasi unik
+ * @property {string} from - Alamat pengirim
+ * @property {string} to - Alamat penerima
+ * @property {string} amount - Jumlah transaksi dalam ETH
+ * @property {string} timestamp - Tanggal transaksi
  */
 
 /**
- * Mock Data: Transaction History
- * Simulates blockchain transaction records
+ * Data Mock: Riwayat Transaksi
+ * Simulasi catatan transaksi blockchain
  * @type {Transaction[]}
  */
 const dummyTransactions = [
@@ -64,18 +64,18 @@ const dummyTransactions = [
 ];
 
 /**
- * Health Check Endpoint
+ * Endpoint Pemeriksaan Kesehatan (Health Check)
  * GET /
- * Verifies that the server is running correctly
+ * Memastikan server berjalan dengan benar
  */
 app.get('/', (req, res) => {
-  res.status(200).send('Backend API is running. Access /api/transactions for data.');
+  res.status(200).send('API Backend berjalan. Akses /api/transactions untuk data.');
 });
 
 /**
- * Get Transactions Endpoint
+ * Endpoint Ambil Riwayat Transaksi
  * GET /api/transactions
- * Returns list of recent transactions
+ * Mengembalikan daftar transaksi terkini
  */
 app.get('/api/transactions', (req, res) => {
   try {
@@ -86,17 +86,17 @@ app.get('/api/transactions', (req, res) => {
       timestamp: new Date().toISOString()
     });
   } catch (error) {
-    console.error('API Error:', error);
+    console.error('Error API:', error);
     res.status(500).json({
       success: false,
-      message: 'Internal Server Error'
+      message: 'Kesalahan Internal Server'
     });
   }
 });
 
 /**
- * Start Server
+ * Jalankan Server
  */
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Server berjalan di http://localhost:${PORT}`);
 });
